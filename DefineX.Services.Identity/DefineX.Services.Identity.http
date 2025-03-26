@@ -1,0 +1,6 @@
+@DefineX.Services.Identity_HostAddress = http://localhost:5214
+
+GET {{DefineX.Services.Identity_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

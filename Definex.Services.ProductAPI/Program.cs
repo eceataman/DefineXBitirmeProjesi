@@ -2,11 +2,11 @@
 using DefineX.Services.ProductAPI.Mapping;
 using DefineX.Services.ProductAPI.Repository;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+// Services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -16,7 +16,20 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 👉 CORS ayarları buraya eklendi
+// 🛡️ Authentication - IdentityServer'a bağlan
+builder.Services.AddAuthentication("Bearer")
+	.AddJwtBearer("Bearer", options =>
+	{
+		options.Authority = builder.Configuration["IdentityServer:Authority"];
+		options.TokenValidationParameters = new TokenValidationParameters
+		{
+			ValidateAudience = false
+		};
+	});
+
+builder.Services.AddAuthorization();
+
+// 🌐 CORS
 builder.Services.AddCors(options =>
 {
 	options.AddPolicy("AllowAll", policy =>
@@ -27,24 +40,24 @@ builder.Services.AddCors(options =>
 	});
 });
 
+// App oluşturuluyor
 var app = builder.Build();
 
-// Seed data
+// 🔁 Seed işlemi
 DbInitializer.SeedDatabase(app);
 
-// Configure the HTTP request pipeline.
+// Middleware sırası
 if (app.Environment.IsDevelopment())
 {
 	app.UseSwagger();
 	app.UseSwaggerUI();
 }
 
-// 👉 CORS middleware'i burada aktif edildi
 app.UseCors("AllowAll");
-
 app.UseHttpsRedirection();
 
-app.UseAuthorization();
+app.UseAuthentication(); // ✅ önce auth
+app.UseAuthorization();  // sonra yetkilendirme
 
 app.MapControllers();
 

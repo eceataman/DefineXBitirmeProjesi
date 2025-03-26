@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DefineX.Services.ProductAPI.Repository;
 using Definex.Services.ProductAPI.Dto;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DefineX.Services.ProductAPI.Controllers
 {
@@ -32,6 +33,7 @@ namespace DefineX.Services.ProductAPI.Controllers
 			return Ok(result);
 		}
 
+		[Authorize(Roles = "Admin")] // 👈 sadece admin erişebilsin
 		[HttpPost]
 		public async Task<IActionResult> CreateOrUpdateProduct([FromBody] ProductDto productDto)
 		{
