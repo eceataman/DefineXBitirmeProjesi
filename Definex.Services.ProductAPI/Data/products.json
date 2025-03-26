@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Basic Black T-Shirt",
+    "price": 120,
+    "description": "Soft cotton black t-shirt for everyday wear.",
+    "categoryName": "T-Shirts",
+    "imageUrl": "https://www.aksiyonpromosyon.com/uploads/2023/04/promosyon-t-shirt-79859.jpg",
+    "sizes": "S,M,L,XL"
+  },
+  {
+    "name": "White Oversized Hoodie",
+    "price": 250,
+    "description": "Cozy oversized hoodie with front pocket.",
+    "categoryName": "Hoodies",
+    "imageUrl": "https://i5.walmartimages.com/asr/a2948858-3b97-49ad-9d75-503f411cf54c.1af6d69b770b382f25c0c46b5c3e9b72.jpeg",
+    "sizes": "M,L"
+  },
+  {
+    "name": "Slim Fit Jeans",
+    "price": 300,
+    "description": "Dark blue slim-fit stretch jeans.",
+    "categoryName": "Pants",
+    "imageUrl": "https://akn-gant.a-cdn.akinoncloud.com/products/2025/02/06/58462/cb94169c-cae8-4e77-a3c4-2a7d8723bbe2_size1000x1300_quality100.jpg",
+    "sizes": "S,M,L"
+  },
+  {
+    "name": "Denim Jacket",
+    "price": 400,
+    "description": "Classic denim jacket for casual look.",
+    "categoryName": "Jackets",
+    "imageUrl": "https://www.cottontraders.com/dw/image/v2/BCDM_PRD/on/demandware.static/-/Sites-cotton-master-catalog/default/dwf3457617/images/original/AD12222W_original_neutral_stonewash_574653.jpg?sw=549",
+    "sizes": "M,L,XL"
+  },
+  {
+    "name": "Summer Dress",
+    "price": 180,
+    "description": "Lightweight floral dress for summer.",
+    "categoryName": "Dresses",
+    "imageUrl": "https://img.kwcdn.com/product/fancy/3354c053-a613-4b00-9c06-eeec24fb0afe.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp",
+    "sizes": "S,M,L"
+  },
+  {
+    "name": "Running Shorts",
+    "price": 90,
+    "description": "Breathable shorts perfect for workouts.",
+    "categoryName": "Shorts",
+    "imageUrl": "https://reebok.ph/cdn/shop/files/100075393_4.jpg?v=1707980203",
+    "sizes": "S,M"
+  },
+  {
+    "name": "Formal Shirt",
+    "price": 220,
+    "description": "White long-sleeve shirt for office or events.",
+    "categoryName": "Shirts",
+    "imageUrl": "https://dtcralphlauren.scene7.com/is/image/PoloGSI/s7-1505352_alternate10?$plpDeskRFAlt$",
+    "sizes": "M,L,XL"
+  },
+  {
+    "name": "Sports Bra",
+    "price": 130,
+    "description": "Supportive sports bra for gym use.",
+    "categoryName": "Activewear",
+    "imageUrl": "https://kicaactive.com/cdn/shop/files/KICA_13-02-23_0705-pichi.jpg?v=1742817704",
+    "sizes": "S,M,L"
+  },
+  {
+    "name": "Casual Blazer",
+    "price": 350,
+    "description": "Modern fit casual blazer, navy blue.",
+    "categoryName": "Blazers",
+    "imageUrl": "https://m.media-amazon.com/images/I/61pOWDQNLoL._AC_UY1000_.jpg",
+    "sizes": "M,L,XL"
+  },
+  {
+    "name": "Yoga Leggings",
+    "price": 160,
+    "description": "High-waisted yoga leggings with stretch fabric.",
+    "categoryName": "Activewear",
+    "imageUrl": "https://www.fishersfinery.com/cdn/shop/files/womens-ankle-yoga-pant-legging-black-051-alt01.jpg?v=1724319615",
+    "sizes": "S,M,L"
+  }
+]
