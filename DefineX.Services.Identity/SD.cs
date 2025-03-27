@@ -16,15 +16,18 @@ namespace DefineX.Services.Identity
                 new IdentityResources.Profile()
             };
 
-        public static IEnumerable<ApiScope> ApiScopes =>
-        new List<ApiScope> {
-                new ApiScope("DefineX", "DefineX Server"),
-                new ApiScope(name: "read",   displayName: "Veri Okuyabilir."),
-                new ApiScope(name: "write",  displayName: "Veri Yazabiliri"),
-                new ApiScope(name: "delete", displayName: "Veri Silebilir")
-        };
+		public static IEnumerable<ApiScope> ApiScopes =>
+	  new List<ApiScope> {
+		new ApiScope("DefineX", "DefineX Server")
+		{
+			UserClaims = { "role", "email", "name" } // ✅ Burada role artık var
+        },
+		new ApiScope(name: "read",   displayName: "Veri Okuyabilir."),
+		new ApiScope(name: "write",  displayName: "Veri Yazabilir."),
+		new ApiScope(name: "delete", displayName: "Veri Silebilir.")
+	  };
 
-        public static IEnumerable<Client> Clients =>
+		public static IEnumerable<Client> Clients =>
             new List<Client>
             {
                 new Client

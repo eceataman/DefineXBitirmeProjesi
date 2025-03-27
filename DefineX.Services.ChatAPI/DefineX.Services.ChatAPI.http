@@ -1,0 +1,6 @@
+@DefineX.Services.ChatAPI_HostAddress = http://localhost:5266
+
+GET {{DefineX.Services.ChatAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

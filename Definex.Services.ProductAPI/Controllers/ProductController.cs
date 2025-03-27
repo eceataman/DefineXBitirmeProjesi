@@ -33,10 +33,19 @@ namespace DefineX.Services.ProductAPI.Controllers
 			return Ok(result);
 		}
 
-		[Authorize(Roles = "Admin")] // 👈 sadece admin erişebilsin
+		
+		
+		
+		//[Authorize(Roles = "Admin")] // 👈 sadece admin erişebilsin
 		[HttpPost]
 		public async Task<IActionResult> CreateOrUpdateProduct([FromBody] ProductDto productDto)
 		{
+			var user = HttpContext.User;
+			Console.WriteLine("Kullanıcı kimlik bilgileri:");
+			foreach (var claim in user.Claims)
+			{
+				Console.WriteLine($"{claim.Type} : {claim.Value}");
+			}
 			if (!ModelState.IsValid)
 				return BadRequest(ModelState);
 
