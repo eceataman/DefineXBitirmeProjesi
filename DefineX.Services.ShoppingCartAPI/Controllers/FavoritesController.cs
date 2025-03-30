@@ -13,20 +13,6 @@ public class FavoritesController : ControllerBase
 		_context = context;
 	}
 
-	//[HttpPost("Add")]
-	//public async Task<IActionResult> AddFavorite([FromBody] FavoriteItem item)
-	//{
-	//	var exists = await _context.FavoriteItems
-	//		.AnyAsync(f => f.UserId == item.UserId && f.ProductId == item.ProductId);
-
-	//	if (!exists)
-	//	{
-	//		_context.FavoriteItems.Add(item);
-	//		await _context.SaveChangesAsync();
-	//	}
-
-	//	return Ok();
-	//}
 	[HttpPost("Add")]
 	public async Task<IActionResult> AddFavorite([FromBody] FavoriteItem item)
 	{

@@ -66,28 +66,6 @@ public class ShoppingCartController : ControllerBase
 
 		return Ok(cart);
 	}
-	//[HttpGet("{userId}")]
-	//public async Task<IActionResult> GetCart(string userId)
-	//{
-	//	var cart = await _context.ShoppingCarts
-	//		.Include(c => c.Items)
-	//		.FirstOrDefaultAsync(c => c.UserId == userId);
-
-	//	 👇 Eğer yoksa: otomatik oluştur ve kaydet
-	//	if (cart == null)
-	//	{
-	//		cart = new ShoppingCart
-	//		{
-	//			UserId = userId,
-	//			Items = new List<CartItem>()
-	//		};
-
-	//		_context.ShoppingCarts.Add(cart);
-	//		await _context.SaveChangesAsync();
-	//	}
-
-	//	return Ok(cart);
-	//}
 
 	[HttpDelete("Clear/{userId}")]
 	public async Task<IActionResult> ClearCart(string userId)

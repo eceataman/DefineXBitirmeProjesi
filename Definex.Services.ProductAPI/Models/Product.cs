@@ -19,6 +19,6 @@ namespace Definex.Services.ProductAPI.Models
 
 		public string ImageUrl { get; set; }
 
-		public string Sizes { get; set; } // Örnek: "S,M,L,XL"
+		public string Sizes { get; set; } 
 	}
 }

@@ -11,7 +11,7 @@ public static class DbInitializer
 		using var scope = app.ApplicationServices.CreateScope();
 		var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
 
-		context.Database.Migrate(); // otomatik migrate olsun
+		context.Database.Migrate(); 
 
 		if (!context.Products.Any())
 		{
