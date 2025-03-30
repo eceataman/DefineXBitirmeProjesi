@@ -11,6 +11,7 @@
 		public string? ImageUrl { get; set; }
 		public double? Price { get; set; }
 		public int Stock { get; set; }
+        public string  UserId { get; set; }
 
-	}
+    }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DefineX.Services.ShoppingCartAPI.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
 public class ApplicationDbContext : DbContext
@@ -8,4 +9,6 @@ public class ApplicationDbContext : DbContext
 
 	public DbSet<ShoppingCart> ShoppingCarts { get; set; }
 	public DbSet<CartItem> CartItems { get; set; }
+	public DbSet<FavoriteItem> FavoriteItems { get; set; }
+
 }
